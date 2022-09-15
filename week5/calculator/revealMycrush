@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class App {
+
+    static Scanner scan = new Scanner(System.in);
+    
+    public static void main(String [] args){
+        
+
+        String crushname = revealMycrushname();
+        System.out.println("I am " + crushname);
+
+        String secondcrush = revealseccrush();
+        System.out.println("I still am" + secondcrush);
+        
+
+        scan.close(); 
+    }
+
+    static String revealMycrushname(){
+        System.out.println("This will reveal who tf is ur crush ");
+        System.out.println("Enter your name ");
+
+        String myName = scan.nextLine();
+
+        System.out.print("Enter the name of your crush: ");
+
+        String nameOfMyCrush = scan.nextLine();
+
+        return myName + " gae for  " + nameOfMyCrush;
+    }
+    static String revealseccrush(){
+        System.out.println("Your 2nd crush is ");
+        System.out.println("Enter your name ");
+
+        String NAME = scan.nextLine();
+
+        System.out.println("who's your 2nd crush ");
+
+        String nameOfMy2ndCrush = scan.nextLine();
+
+        return NAME + " fell for " + nameOfMy2ndCrush; 
+    }
+}
