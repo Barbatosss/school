@@ -1,0 +1,67 @@
+import java.util.Scanner;
+public class App
+{
+    static Scanner scan = new Scanner(System.in);
+	public static void main(String[] args) {
+    
+	int sumtotal = 0, total = 0, quantity;
+	int decision = 0, counter = 0;
+	int pricepencil = 10;
+	int pricepaper = 20;
+	int priceballpen = 30;
+    
+    System.out.print("Do you want to begin the transaction? Yes 1 , No 2");
+	int ans = scan.nextInt();
+	while(ans == 1){
+	    System.out.print("Number of item you want to buy: ");
+	    
+	    
+	    for(counter = 0; counter <= decision; counter ++){
+	        System.out.print("[1] Pencil");
+	        System.out.print("[2] Paper");
+	        System.out.print("[3] Ballpen");
+	        System.out.print("\n");
+	        
+	        System.out.print("Item Number:");
+	        int itemcode = scan.nextInt();
+	       
+            
+
+	        if(itemcode == 1){
+	            System.out.println("Pencil");
+	            System.out.println("Price: " + pricepencil);
+	            System.out.println("Quantity: ");
+	            quantity = scan.nextInt();
+	            total = pricepencil * quantity;
+	            System.out.print("Total: " + total);
+	            }
+	            if(itemcode == 2){
+	            System.out.println("Paper");
+	            System.out.println("Price: " + pricepaper);
+	            System.out.println("Quantity: ");
+	            quantity = scan.nextInt();
+	            total = pricepaper*quantity;
+	            System.out.println("Total: " + total);
+	            }
+	            if(itemcode == 3){
+	            System.out.println("ballpen");
+	            System.out.println("Price: " + priceballpen);
+	            System.out.println("Quantity: ");
+	            quantity = scan.nextInt();
+	            total = priceballpen*quantity;
+	            System.out.println("Total: " + total);
+	            }
+	             sumtotal = total;
+	        } System.out.println("Your need to pay:" + sumtotal);
+	          System.out.println("Cash Given: ");
+	          int cashgiven = scan.nextInt();
+	          int change = cashgiven-sumtotal;
+	          System.out.println("Your change: " + change);
+	          System.out.print("Thank you for shopping with us!");
+	          
+              
+	    }    
+	    
+	}
+        
+	}
